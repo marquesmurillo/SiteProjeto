@@ -6,8 +6,58 @@
     <title>Home</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
+<script language="javascript"> 
+function mostrarValor(){
+    var valor; 
+      var valor2; 
+     
+      valor = 5; 
+      valor2 = "3"; 
+      valor3 = "9"; 
+      
+      valor = valor * valor2; 
 
-<body>
+     valor = valor2+valor3; 
+
+      var conteudo = document.getElementById("conteudo")
+      conteudo.innerHTML="O resultado é:" + valor;
+      conteudo.style="background-color:blue;left:300px; top: 200px; position: absolute;"
+
+}
+
+var distanciaEsquerda=100;
+var distanciaTopo=100;
+
+function esquerda(){
+    var conteudo = document.getElementById("conteudo");
+    distanciaEsquerda=distanciaEsquerda -5
+    conteudo.style=`left: ${distanciaEsquerda}px; position: absolute;`
+    
+}
+function direita(){
+    var conteudo = document.getElementById("conteudo");
+    distanciaEsquerda=distanciaEsquerda +5
+    conteudo.style=`left: ${distanciaEsquerda}px; position: absolute;`
+}
+function acima(){
+    var conteudo = document.getElementById("conteudo");
+    distanciaTopo=distanciaTopo -5
+    conteudo.style=`left: ${distanciaTopo}px; position: absolute;`
+}
+function baixo(){
+    var conteudo = document.getElementById("conteudo");
+    distanciaTopo=distanciaTopo +5
+    conteudo.style=`left: ${distanciaTopo}px; position: absolute;`
+}
+
+
+
+      
+      </script>
+     
+    </head>
+
+<body onload="mostrarValor()">
     <nav class="navbar navbar-dark bg-dark">
         <ul class="nav justfy-content-content-center">
             <li class="nav-item"><a href="#" class="nav-link">home </a></li>
@@ -20,11 +70,17 @@
 
     
         <div class="container col-6"></div>
-        Boa noite! Como posso ajudar você hoje?
+            <label for = "nome" > nome:</label>
+        <input type="text" id="nome" name="nome">
+    </div>
+
 
     
     <div class="container col-3">
-        Os links de navegação da barra de navegação baseiam-se em nossas .navopções com sua própria classe modificadora e exigem o uso de classes alternadoras para um estilo responsivo adequado. A navegação nas barras de navegação também crescerá para ocupar o máximo de espaço horizontal possível para manter o conteúdo da barra de navegação alinhado com segurança.
+        <button type="button" class="btn-primary>">esquerda </button>
+        <button type="button" class="btn-primary>">direita </button>
+        <button type="button" class="btn-primary>">acima </button>
+        <button type="button" class="btn-primary>">baixo </button>
             </div>
         </div>
     </div>
